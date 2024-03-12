@@ -21,7 +21,7 @@ app.get("/getTextFiles", (req, res) => {
       console.log(err);
       res
         .status(500)
-        .send("An error occured while listing the files from directory");
+        .send("An error occurred while listing the files from directory");
     } else {
       const textFiles = files.filter((file) => path.extname(file) === ".txt");
       res.status(200).json(textFiles);
